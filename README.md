@@ -6,7 +6,11 @@ Made with React
 ### `Screenshots`
 
 <table>
- 
+  <tr>
+    <td>
+      <img  width="100%"  src="./images/demo.gif">
+    </td>
+  </tr>
   <tr>
     <td>
       <img   src="./images/1.png">
