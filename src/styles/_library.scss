@@ -1,0 +1,99 @@
+.library {
+  position: fixed;
+  box-shadow: 2px 2px 40px #96b1b880;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  top: 2%;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  left: 0;
+  width: 20rem;
+  direction: rtl;
+  height: 95%;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  overflow: scroll;
+  z-index: 52;
+  overflow-x: hidden;
+
+  .lib-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: 'laca light';
+    color: #07545d;
+    font-size: 1.5rem;
+    svg{
+      cursor: pointer;
+      color: #07545d;
+    }
+  }
+}
+.library-songs {
+  direction: ltr;
+}
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 1rem;
+  cursor: pointer;
+  transition: all 0.19s ease-out;
+
+  img {
+    width: 30%;
+    border-radius: 15px;
+  }
+  &:hover {
+    background: rgb(255, 255, 255);
+  }
+}
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    font-size: 1.25rem;
+    color: #111;
+  }
+  h4 {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    color: rgb(15, 65, 71);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 10px;
+  border: transparent;
+}
+.selected {
+  background: rgb(2, 124, 133);
+  h4,h3{
+    color: #fff !important;
+  }
+  &:hover{
+    background: rgb(0, 148, 158);
+  }
+}
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100vw;
+  }
+}
